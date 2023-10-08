@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Detection</title>
+</head>
+<body>
+    <h1>Language Detection</h1>
+    <form method="POST" action="/detect_language">
+        <textarea name="text" placeholder="Enter text..." rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Detect Language">
+    </form>
+    
+    {% if detected_language %}
+    <h2>Detected Language:</h2>
+    <p>{{ detected_language }}</p>
+    {% endif %}
+</body>
+</html>
